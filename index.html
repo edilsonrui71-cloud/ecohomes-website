@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Descobre casas modernas, sustentáveis e rodeadas pela natureza.">
+
+    <title>EcoHomes — Encontra a tua próxima casa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="website">
+
+        <!-- CABEÇALHO -->
+
+        <header class="navbar">
+
+            <a href="#inicio" class="logo">
+                Eco<span>Homes</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#inicio">Início</a>
+                <a href="#casas">Casas</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <a href="#casas" class="nav-button">
+                Explorar casas ↗
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+        </header>
+
+
+        <!-- SECÇÃO PRINCIPAL -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    <span class="badge-icon">✳</span>
+                    Viver melhor, naturalmente
+                </span>
+
+                <h1>
+                    Encontra casas<br>
+                    em harmonia com<br>
+                    a natureza.
+                </h1>
+
+                <p>
+                    Descobre espaços únicos onde o conforto,
+                    a arquitetura e a natureza se encontram.
+                </p>
+
+                <a href="#casas" class="button">
+                    Explorar propriedades <span>↗</span>
+                </a>
+
+            </div>
+
+            <div class="hero-bottom">
+                <span>Descobre uma nova forma de viver.</span>
+                <span class="scroll-indicator">↓</span>
+            </div>
+
+        </section>
+
+
+        <!-- BARRA DE PESQUISA -->
+
+        <section class="search-section" aria-label="Pesquisar casas">
+
+            <form class="search-bar" id="searchForm">
+
+                <div class="search-field">
+                    <span class="field-icon">⌖</span>
+
+                    <div class="field-content">
+                        <label for="location">Localização</label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="Ex.: Maputo"
+                        >
+                    </div>
+                </div>
+
+                <div class="search-field">
+                    <span class="field-icon">⌂</span>
+
+                    <div class="field-content">
+                        <label for="propertyType">Tipo de propriedade</label>
+
+                        <select id="propertyType">
+                            <option value="">Todas as propriedades</option>
+                            <option value="casa">Casa</option>
+                            <option value="villa">Villa</option>
+                            <option value="cabana">Cabana</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="search-button">
+                    Pesquisar <span>↗</span>
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SOBRE NÓS -->
+
+        <section class="about section-container" id="sobre">
+
+            <div class="about-visual">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+                    alt="Casa moderna com jardim"
+                    loading="lazy"
+                >
+
+                <div class="image-caption">
+                    <span class="caption-icon">✳</span>
+
+                    <div>
+                        <strong>Viver em equilíbrio</strong>
+                        <p>Arquitetura e natureza.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-content">
+
+                <span class="eyebrow">A NOSSA FILOSOFIA</span>
+
+                <h2>
+                    Um novo conceito<br>
+                    de viver.
+                </h2>
+
+                <p>
+                    Acreditamos que a casa ideal vai muito além
+                    das paredes. É um lugar para encontrar
+                    tranquilidade, conforto e inspiração.
+                </p>
+
+                <p>
+                    Descobre espaços cuidadosamente selecionados
+                    para quem procura uma ligação mais próxima
+                    com a natureza.
+                </p>
+
+                <a href="#casas" class="button">
+                    Descobrir mais ↗
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- LISTA DE PROPRIEDADES -->
+
+        <section class="properties" id="casas">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            A NOSSA SELEÇÃO
+                        </span>
+
+                        <h2>
+                            Encontra o teu próximo refúgio.
+                        </h2>
+                    </div>
+
+                    <p>
+                        Espaços especiais para uma vida
+                        mais tranquila e natural.
+                    </p>
+
+                </div>
+
+
+                <!-- MENSAGEM DA PESQUISA -->
+
+                <div
+                    id="searchMessage"
+                    class="search-message"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- CARTÕES -->
+
+                <div class="property-grid" id="propertyGrid">
+
+
+                    <!-- CASA 1 -->
+
+                    <article
+                        class="property-card"
+                        data-type="casa"
+                        data-location="maputo"
+                    >
+
+                        <a href="#contacto" class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
+                                alt="Casa moderna com jardim verde"
+                                loading="lazy"
+                            >
+
+                            <span class="property-tag">
+                                Sustentável
+                            </span>
+
+                        </a>
+
+                        <div class="card-content">
+
+                            <div class="card-category">
+                                ARQUITETURA NATURAL
+                            </div>
+
+                            <h3>Casa Verde</h3>
+
+                            <p>
+                                Design contemporâneo e espaços
+                                em harmonia com a natureza.
+                            </p>
+
+                            <div class="card-footer">
+
+                                <span class="location-label">
+                                    ⌖ Maputo
+                                </span>
+
+                                <a href="#contacto" class="card-button">
+                                    Explorar ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CASA 2 -->
+
+                    <article
+                        class="property-card"
+                        data-type="villa"
+                        data-location="matola"
+                    >
+
+                        <a href="#contacto" class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+                                alt="Interior moderno e elegante"
+                                loading="lazy"
+                            >
+
+                            <span class="property-tag">
+                                Design moderno
+                            </span>
+
+                        </a>
+
+                        <div class="card-content">
+
+                            <div class="card-category">
+                                CONFORTO E ELEGÂNCIA
+                            </div>
+
+                            <h3>Villa Serenity</h3>
+
+                            <p>
+                                Um ambiente elegante pensado
+                                para proporcionar tranquilidade.
+                            </p>
+
+                            <div class="card-footer">
+
+                                <span class="location-label">
+                                    ⌖ Matola
+                                </span>
+
+                                <a href="#contacto" class="card-button">
+                                    Explorar ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CASA 3 -->
+
+                    <article
+                        class="property-card"
+                        data-type="cabana"
+                        data-location="boane"
+                    >
+
+                        <a href="#contacto" class="card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                                alt="Casa contemporânea com grandes janelas"
+                                loading="lazy"
+                            >
+
+                            <span class="property-tag">
+                                Refúgio natural
+                            </span>
+
+                        </a>
+
+                        <div class="card-content">
+
+                            <div class="card-category">
+                                VIDA NATURAL
+                            </div>
+
+                            <h3>Cabana Forest</h3>
+
+                            <p>
+                                Um espaço acolhedor para relaxar
+                                e aproveitar a natureza.
+                            </p>
+
+                            <div class="card-footer">
+
+                                <span class="location-label">
+                                    ⌖ Boane
+                                </span>
+
+                                <a href="#contacto" class="card-button">
+                                    Explorar ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAMADA PARA AÇÃO -->
+
+        <section class="contact-section" id="contacto">
+
+            <div class="contact-content">
+
+                <span class="eyebrow">
+                    A TUA PRÓXIMA CASA
+                </span>
+
+                <h2>
+                    O lugar certo pode<br>
+                    mudar tudo.
+                </h2>
+
+                <p>
+                    Começa a explorar novas possibilidades
+                    e encontra o espaço ideal para ti.
+                </p>
+
+                <a
+                    href="mailto:contacto@exemplo.com?subject=Informações%20sobre%20propriedades"
+                    class="button"
+                >
+                    Entrar em contacto ↗
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="footer">
+
+            <a href="#inicio" class="logo">
+                Eco<span>Homes</span>
+            </a>
+
+            <p>
+                Inspiramos uma forma mais natural de viver.
+            </p>
+
+            <span class="copyright">
+                © <span id="currentYear"></span> EcoHomes.
+            </span>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
